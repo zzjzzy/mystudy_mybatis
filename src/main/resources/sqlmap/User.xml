@@ -7,7 +7,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 注意：使用mapper代理方法开发，namespace有特殊重要的作用
 -->
 <mapper namespace="test">
-	<select id="findUserById" parameterType="int" resultType="cn.itcast.mybatis.po.User">
+	<select id="findUserById" parameterType="int" resultType="com.itcast.pojo.User">
 		SELECT * FROM USER WHERE id=#{value}
 	</select>
 </mapper>
