@@ -7,4 +7,5 @@ import com.itcast.pojo.User;
 public interface UserDao {
 
 	public User findUserById (int id) throws Exception;
+	public void add(User user) throws Exception;
 }

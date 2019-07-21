@@ -21,8 +21,12 @@ public class DaoTest {
 		SqlSessionFactory sessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
 		SqlSession sqlSession = sessionFactory.openSession();
 		UserDao userDao = sqlSession.getMapper(UserDao.class);
-		User user = userDao.findUserById(1);
+		User user = new User();
+		user.setUsername("李五");
+		userDao.add(user);
+		sqlSession.commit();
 		System.out.println(user);
+//		User user = userDao.findUserById(1);
+//		System.out.println(user);
 	}
-
 }
